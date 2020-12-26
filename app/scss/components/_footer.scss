@@ -1,0 +1,132 @@
+.footer {
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        padding: 80px 0 75px;
+        border-bottom: 1px solid #DAE4E9;
+        font-size: 14px;
+
+
+    }
+  
+    &__title,
+    &__logo {
+        margin-bottom: 30px;
+        display: inline-block;
+    }
+
+    &__logo {
+        display: inline-block;
+    }
+
+    &__title {
+        @extend %dmsans-bold;
+        color: #1F2044;
+        text-transform: uppercase;
+    }
+
+
+
+    &__address {
+        max-width: 195px;
+        width: 100%;
+        font-style: normal;
+    }
+
+    &__coordinates {
+        margin-bottom: 10px;
+    }
+
+
+    &__tel {
+        margin-bottom: 20px;
+    }
+
+    &__col,
+    &__form {
+        padding-top: 25px;
+    }
+
+    &__list,
+    &__contacts {
+        line-height: 2.28;
+    }
+
+    &__form {
+        max-width: 235px;
+        width: 100%;
+    }
+
+    &__text {
+        margin-bottom: 40px;
+    }
+
+    &__feedback {
+        display: flex;
+        @extend %dmsans-regular;
+        font-size: 12px;
+    }
+
+    &__label {
+        position: absolute;
+        opacity: 0;
+    }
+
+    &__input {
+        position: relative;
+        max-width: 170px;
+        padding: 0 15px;
+        height: 40px;
+        flex-grow: 1;
+        border: none;
+        background-color: #fef7f0;
+        &::placeholder {
+           color: #234969;
+        }
+    }
+
+    &__button {
+        max-width: 100px;
+        flex-grow: 1;
+        background-color: #fff;
+        border: none;
+        color: #fff;
+        background-color: #a3bbc8;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 35px 0;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__nav-item {
+
+        &:not(:last-child) a {
+            position: relative;
+            padding-right: 14px;
+            margin-right: 14px;
+            color: #7b7b7b;
+            
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+                width: 2px;
+                height: 16px;
+                background-color: #7b7b7b;
+                opacity: 0.7;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,66 @@
+.lamps {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .product-box {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        padding: 100px 0;
+        margin-right: 30px;
+        background-color: #feefe2;
+    
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &__wrapper {
+            width: 250px;
+        }
+
+        &__img {
+            position: absolute;
+            top: -90px;
+        }
+
+        &__title {
+            @extend %dmsans-bold;
+            font-size: 26px;
+            margin-bottom: 32px;
+            color: #243f4d;
+        }
+
+        &__text {
+            margin-bottom: 37px;
+            max-width: 328px;
+            width: 100%;
+        }
+
+        &__link {
+            position: relative;
+            display: inline-block;
+            padding: 24px 85px 24px 19px;
+            border: 1px solid #436372;
+            border-radius: 3px;
+            color: #243f4d;
+            font-size: 15px;
+
+            &::after {
+                content:'';
+                display: block;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 20px;
+                background-image: url(../images/decor/arrow-black.svg);
+                background-repeat: no-repeat;
+                width: 22px;
+                height: 9px;
+            }
+        }
+    }
+}

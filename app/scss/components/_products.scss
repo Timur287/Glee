@@ -1,0 +1,118 @@
+.products {
+    padding: 75px 0 185px;
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+
+    .mixitup-control-active {
+        color: $title;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 40px;
+    }
+}
+
+.mix-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 85px;
+    
+    &__btn {
+        @extend %dmsans-bold;
+        color: $text;
+        border: none;
+        background-color: transparent;
+        margin-right: 30px;
+        cursor: pointer;
+        transition: color 0.3s;
+
+        &:hover {
+            color: $title;
+        }
+    }
+}
+
+.product-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 270px;
+    width: 100%;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    text-align: center;
+    padding-bottom: 40px;
+
+    &__box {
+        height: 270px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__btns {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    &:hover .product-card__btns {
+        opacity: 1;
+    }
+
+    &__btn,
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        border: none;
+        border-radius: 50%;
+        margin-right: 15px;
+        cursor: pointer;
+        background-color: #fff;
+        box-shadow: 0px 6px 47px 3px rgba(0,0,0,0.09);
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+            background-color: #a3bbc8;
+
+            svg path {
+                fill: #fff;
+            }
+        }
+
+        svg {
+            width: 19px;
+            height: 19px;   
+        }
+    }
+
+    &__text {
+        line-height: 2.5;
+    }
+    &__title {
+        @extend %dmsans-medium;
+        color:#2B4552;
+        margin-bottom: -10px;
+    }
+
+    &__price {
+        @extend %dmsans-bold;
+        color: #a3bbc8;
+    }
+}

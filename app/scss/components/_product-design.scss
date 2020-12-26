@@ -1,0 +1,62 @@
+.product-design {
+    padding: 100px 0 120px;
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 35px;
+    }
+}
+
+.product-classic {
+    position: relative;
+    height: 245px;
+    max-width: 375px;
+    width: 100%;
+    padding: 40px 0 0 35px;
+    font-size: 20px;
+    @extend %dmsans-bold;
+    color: $title;
+    background-color: #f8f8f8;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+   
+    &__img {
+        object-fit: contain;
+        position: absolute;
+        bottom: 30px;
+        left: 110px;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        max-width: 200px;
+        width: 100%;
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        color: #a9bfcb;
+    }
+
+    &--chair,
+    &--chair--black {
+        display: flex;
+        .product-classic__img {
+            position: static;
+            align-self: start;
+            padding-top: 10px;
+        }
+        .product-classic__title {
+            max-width: 180px;
+        }
+
+    }
+
+    &--chair--black {
+        .product-classic__img {
+            padding-top: 15px;
+        }
+    }
+}

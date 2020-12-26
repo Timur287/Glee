@@ -1,0 +1,84 @@
+.top-slider {
+    position: relative;
+    
+    &__inner {
+        background-color: #fcd7b6;
+        padding: 100px 0 80px;
+    }
+
+    &__item {
+        display: flex !important;
+        justify-content: flex-end; 
+    }
+
+
+    &__content {
+        max-width: 420px;
+        width: 100%;
+        padding-top: 80px;
+        margin-right: 6%;
+        
+    }
+
+    &__img {
+        margin-right: 11%;
+    }
+
+    &__title {
+        font-size: 72px;
+        @extend %rubic-medium;
+        color: #243f4d;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        max-width: 362px;
+        margin-bottom: 45px;
+        font-size: 18px;
+    }
+
+    &__btn {
+        position: relative;
+        display: inline-block;
+        background-color: $btn;
+        padding: 24px 100px 24px 27px;
+        cursor: pointer;
+
+        &::after {
+            content:'';
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            background-image: url(../images/decor/arrow.svg);
+            width: 22px;
+            height: 9px;
+
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+
+        li {
+            margin-right: 10px;
+        }
+
+        button {
+            width: 30px;
+            height: 30px;
+            font-size: 11px;
+            color: #243f4d;
+            background-color: #fde3cc;
+            border: none;
+            border-radius: 50%;
+            outline: inherit;
+            cursor: pointer;
+        }
+
+        .slick-active button {
+            background-color: #fff;
+        }
+    }
+}
